@@ -11,7 +11,7 @@
     Friends
   </a>
   <div class="right menu">
-    <a class="ui item">
+    <a href="#" class="ui item" @click="login">
       Login
     </a>
   </div>
@@ -20,8 +20,13 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+ 
+
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    methods: {...mapActions(['login'])}
+    
 }
 </script>
 
